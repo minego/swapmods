@@ -25,8 +25,11 @@
 			};
 		};
 
-		overlay = final: prev: {
-			swapmods = self.packages.x86_64-linux.default;
+		overlay = self: super: {
+			minego = (super.minego or {}) // {
+				swapmods = self.packages.x86_64-linux.default;
+			};
 		};
+
 	};
 }
