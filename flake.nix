@@ -24,5 +24,9 @@
 				platforms	= platforms.linux;
 			};
 		};
+
+		overlay = final: prev: {
+			swapmods = self.packages.x86_64-linux.default;
+		};
 	};
 }
